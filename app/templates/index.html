@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Delivery app by group 2</title>
+        <title>{% block title %}Delivery app by group 2{% endblock %}</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
 
         
         <style>
@@ -17,6 +19,8 @@
                 text-align: center;
                 font-size: 100px;
                 padding-top:50px;
+                font-weight: 700;
+                
             }
             button{
                 padding: 10px;
@@ -45,16 +49,17 @@
     <body>
 
         
-        
+        {% block content %}
         <h1>Welcome to the<br>Delivery App</h1>
         <div class="buttons">
             <center>
 
             <button><a  name = login href ="/login"> Login</a></button>
             <button><a  name = register href ="/register"> Register</a></button>
-        
+            
             </center>
         </div>
+        {% endblock %}
         
     </body>
 
