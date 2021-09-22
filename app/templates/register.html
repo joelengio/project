@@ -1,0 +1,29 @@
+{% extends "index.html"%}
+{% block title %} Register Here{% endblock%}
+{% block content %}
+<h1>Registration page</h1>
+<center>
+<form action ="" method ="POST">
+    <p>Username : <input name ="username" type ="text" placeholder ="Enter your username" required></p>
+    <p>E-mail : <input name ="email" type ="text" placeholder ="Enter your E-mail" required></p>
+    <p>Password : <input name ="password1" type ="password" placeholder ="Enter your password" required></p>
+    <p>Confirm Password : <input name ="password2" type ="password" placeholder ="Enter your password" required></p>
+    <p>User Type: <select name="usertype">
+        <option value = "costumer">Costumer</option>
+        <option value = "hotel">Hotel</option>
+        </select></p>
+
+    <button type ="submit">Register</button>
+
+    
+
+</form>
+{% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+</center>
+{% endblock %}

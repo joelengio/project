@@ -1,2 +1,8 @@
 from flask import Flask
-app = Flask(__name__,template_folder='templates')
+import pymongo
+
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'asdfg'
+
+client = pymongo.MongoClient('localhost' ,27017)
+db = client.user_data
