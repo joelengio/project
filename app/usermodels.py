@@ -1,5 +1,5 @@
 from app.app import db
-from mongoengine import StringField
+
 
 class User(db.Document):
     username = db.StringField(required = True)
@@ -24,3 +24,12 @@ class User(db.Document):
 
     def check_role(self, roles):
         return self.roles in roles
+
+'''
+
+    def __init__(self, username, email, password , user_id):
+        self.user_id = _id
+        self.username = username
+        self.email = email
+        self.password = password
+'''

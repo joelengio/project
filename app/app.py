@@ -10,4 +10,6 @@ app.config["MONGODB_SETTINGS"] = {
     "port" : 27017
 }
 db = MongoEngine(app)
+
 login_manager = LoginManager()
+
